@@ -65,9 +65,7 @@ func setup_file_btn(btn: Button, btn_text: String, file_path: String) -> Button:
 
 	btn.name = btn_text
 	btn.set_script(WADFilesListItemScript)
-	#btn.set_info_panel(WADFileInfo)
-	btn.set_run_button(run_button)
-	btn.connect_signals(file_path)
+	btn.connect_signals(file_path, run_button, WADFileInfo)
 
 	return btn
 
